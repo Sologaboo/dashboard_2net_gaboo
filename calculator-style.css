@@ -1,15 +1,15 @@
 /* --- Estilos del Widget de Prorrateo Flotante --- */
 .prorrateo-widget {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: var(--floating-button-offset);
+  right: var(--floating-button-offset);
   z-index: 1000;
   font-family: inherit;
 }
 
 .prorrateo-fab {
-  width: 45px;
-  height: 45px;
+  width: var(--floating-button-size);
+  height: var(--floating-button-size);
   border-radius: 50%;
   background-color: #000;
   border: 1px solid #562ca9;

@@ -3,14 +3,14 @@
    ========================================== */
 .floating-calendar-btn {
   position: fixed;
-  bottom: 75px;
-  right: 20px;
+  bottom: calc(var(--floating-button-offset) + var(--floating-button-size) + var(--floating-button-gap));
+  right: var(--floating-button-offset);
   background-color: transparent;
   color: white;
   border:  1px solid #562ca9;
   border-radius: 50%;
-  width: 45px;
-  height: 45px;
+  width: var(--floating-button-size);
+  height: var(--floating-button-size);
   font-size: 22px;
   cursor: pointer;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
@@ -110,10 +110,12 @@
   }
   
   .floating-calendar-btn {
-    bottom: 75px;
-    right: 15px;
-    width: 45px; /* Se ajusta ligeramente también en móvil si la calculadora es más pequeña */
-    height: 45px;
     font-size: 18px;
+  }
+}
+
+@media (max-width: 650px) {
+  :root {
+    --floating-button-offset: 15px;
   }
 }
